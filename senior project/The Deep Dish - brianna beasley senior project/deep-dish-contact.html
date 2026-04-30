@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">  
+        <meta name = "Author" content ="Brianna Beasley">
+        <meta name= "viewport" content = "width = device-width, initial-scale =1.0 ">
+        <title> The Deep Dish - Contact</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css-contact.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Knewave&family=Momo+Signature&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+        <!-- JS sheet -->
+        <script src="theme-script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <section>
+                <img class="logoimg" src ="assets/frying-pan-icon-img.jpg" alt ="frying pan tossing food">
+                <h1> The Deep Dish</h1>
+                <p id="slogan"> "A haven of goodness!"</p>
+        
+                <nav>
+                    <ul>
+                       <li><a href ="deep-dish-home.html">Home</a></li>
+                        <li><a href ="deep-dish-search.html">Search</a></li>
+                        <li><a href ="deep-dish-gallery.html">Gallery</a></li>
+                        <li><a href ="deep-dish-recipes.html">Recipes</a></li>
+                        <li><a href ="deep-dish-contact.html">Contact</a></li>
+                        <li><a href ="#"><span hidden>.</span><img class="themeBttn" src="assets/adjust-svgrepo-com.svg" alt=""></a></li>
+                    </ul>
+                </nav>
+            </section>    
+        </header>
+        <main>
+                <!-- add contact form here -->
+            <section>
+                <h2> Contact Us!</h2>
+                <p>Have a recipe you want to see us add? Have an idea to improve our site?</p>
+                <p>Let us know!</p>
+            </section>
+            <form autocomplete="on" method="get">
+                <p>Tell us about yourself!</p>
+                <div>
+                    <label for="firstname">First name*</label>
+                    <input type="text" id="firstname" required>
+                </div>
+                <div>
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number*</label>
+                    <input  type="tel" id="phone" maxlength="10" required>
+                </div>
+                <fieldset>
+                    <legend>Preferred Method of Contact</legend>
+                        <div>
+                            <input type="radio" id="preferemail" name="preference" value="Contact me by email!">
+                            <label for="preferemail">Contact me by email!</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="preferphone" name="preference" value="Contact me by phone!">
+                            <label for="preferphone">Contact me by phone!</label>
+                        </div>
+                    </fieldset>
+                <label for="comments">Leave us a comment!</label>
+                <input type="textarea" id="comments">
+
+                <input type="submit" id="submit">
+            </form>
+        </main>
+        <footer>
+            <p>Visit us on <a href="https://x.com/">Twitter</a>, <a href="https://www.facebook.com/">Facebook</a>, and <a href="https://www.instagram.com/">Instagram</a>!</p>
+        </footer>
+    </body>
+    
+</html>
