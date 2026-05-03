@@ -1,0 +1,458 @@
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* theme change here */
+/* THEME CHANGE COLOR HERE */
+.dark-theme{
+	--off-black-text:#FAF9F6;
+	--off-white-text: #181818;
+	--light-red:#52050A;
+	--coral:#832161;
+	--pink:#9B7EDE;
+	--sage:#8ba7cc;
+	--muted-green:#76E7CD;
+	transition: 2.5s;
+}
+
+
+/* global styles */
+:root{
+	--title-font: "Momo Signature", cursive;
+	--header-font: "Archivo Black", sans-serif;
+	--recipe-name-font: "Knewave", "Archivo Black", system-ui;
+	--paragraph-font: "Public Sans", sans-serif;
+
+
+	/* LIGHT THEME COLOR HERE */
+	--off-black-text:  #181818;
+	--off-white-text:#FAF9F6;
+	--light-red:#DD614A;
+	--coral:#F48668;
+	--pink:#F4A698;
+	--sage:#C5C392;
+	--muted-green:#73A580;
+
+		
+	
+
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	background-color: var(--pink);
+	color: var(--off-black-text);
+	font-family: var(--paragraph-font);
+	transition: 2.5s;
+}
+
+header{
+	background-color: var(--light-red);
+	color: var(--off-black-text);
+	transition: 2.5s;
+}
+
+h1{
+	font-family: var(--title-font);
+	font-size: 6vw;
+        width: 45vw;
+        align-self: end;
+}
+
+h2{
+	font-family: var(--recipe-name-font);
+	font-size: 4.5vw;
+}
+
+h3{
+	font-family: var(--header-font);
+font-size: 3.75vw;
+}
+
+.number{
+	font-family: var(--recipe-name-font);
+	border: 4px solid var(--off-white-text);
+}
+
+main{
+	transition: 1s;
+}
+
+p{
+	font-family: var(--paragraph-font);
+	font-size: 2vw;
+}
+
+ol li{
+	list-style-type: decimal;
+	margin-left: 25px;
+	font-family: var(--paragraph-font);
+}
+
+nav li{
+	list-style-type: none;
+}
+
+ul li{
+	list-style-type: square;
+	margin-left: 25px;
+	font-family: var(--paragraph-font);
+}
+
+.rimg{
+border: 5px solid var(--off-white-text);
+}
+
+
+footer{
+	background-color: var(--light-red);
+	color: var(--off-black-text);
+	font-family: var(--paragraph-font);
+}
+
+
+/* media query for mobile  (under 600px)*/
+@media only screen and (max-width: 600px) {
+	.logoimg{
+		grid-column: 1 / 2;
+		grid-row: 1 / 3;
+		width: 29vw;
+		align-self: center;
+		margin: 1vw;
+	}
+
+	header section{
+		display:flex;
+	}
+
+	#nav-grid{
+		display: grid;
+		grid-auto-flow: column;
+		position: sticky;
+		top: 0px;
+	}
+	
+	.themeBttn{
+		bottom: 4px;
+        width: 8vw;
+        height: auto;
+        position: relative;
+        left: 22px;
+
+	}
+
+	header section{
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 2fr 1fr 1fr;
+		display: grid;
+	}
+
+	h1{
+		font-family: var(--title-font);
+		font-size: 6vw;
+        width: 45vw;
+        align-self: end;
+	}
+
+	#slogan{
+		grid-row: 2 / 3;
+        align-self: center;
+        bottom: 25px;
+        position: relative;
+        font-size: 3vw;
+	}
+
+	nav{
+		grid-row: 1 / 3;
+		grid-column: 3 / 4;
+		justify-self: center;
+		align-self: center;
+		background-color: var(--muted-green);
+	}
+
+	nav li{
+		list-style-type: none;
+		text-decoration:none;
+		margin: 3px;
+		font-size: 5vw;
+		display: flex;
+		
+	}
+
+	nav li a{
+		text-decoration:none;
+		color: var(--off-black-text);
+		background-color: var(--muted-green);
+		border-bottom: var(--off-black-text) 2px solid;
+		width: 18vw;
+        height: 6vw;
+	}
+
+	nav li a:visited{
+		background-color: var(--sage);
+	}
+	footer a:visited{
+		color:var(--sage);
+	}
+	#p-blurtext{
+		position: relative;
+        height: 390;
+        z-index: 1;
+        bottom: 340px;
+		
+	}
+	.blur{
+		color: var(--off-white-text);
+		font-style: italic;
+		font-weight: 600;
+		background-color:rgba(24,24,24,0.4);
+		height: 13px;
+	}
+	
+	footer p{
+		font-size: 3vw;
+        display: flex;
+        justify-content: center;
+        padding: 6px;
+	}
+
+
+	/* styles for main on this page */
+	main section{
+		display: grid;
+		justify-content: space-around;
+		justify-items: center;
+		grid-gap: 10px;
+		align-items: center;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	main section img{
+		width: 84px;
+        height: 80px;
+        align-self: stretch;
+	}
+
+	main{
+		padding: 20px 3px;
+	}
+	
+	
+	ul{
+		margin: 5px;
+    	width: 25vh;
+		margin-bottom: 15px;
+	}
+
+	ul li{
+		padding: 2px 0px;
+	}
+
+
+}
+
+/* media query for tablet (min 600px) */
+
+@media only screen and (min-width: 600px){
+	.logoimg{
+		grid-column: 1 / 2;
+		grid-row: 1 / 3;
+		width: 29vw;
+		align-self: center;
+		margin: 29px 2px;	
+	}
+
+	header section{
+		display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+		height: 38vw;
+	}
+
+	header{
+		width: 201.7vh;
+        height: 35vw;
+	}
+
+	.themeBttn{
+		bottom: 4px;
+        width: 8vw;
+        height: auto;
+        position: relative;
+        left: 22px;
+	}
+
+	#nav-grid{
+		display: grid;
+		grid-auto-flow: row;
+		position: sticky;
+		top: 0px;
+	}
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+    }
+
+	h1{
+		font-family: var(--title-font);
+		font-size: 6vw;
+        width: 45vw;
+        align-self: end;
+	}
+	
+	#slogan{
+		grid-row: 2 / 3;
+        align-self: center;
+        bottom: 25px;
+        position: relative;
+        font-size: 3vw;
+		width: 300px;
+	}
+
+	nav{
+		justify-self: center;
+        align-self: center;
+        grid-column: 1 / 3;
+		background-color: var(--muted-green);
+        width: 201.7vh;
+		justify-items: center;
+	}
+
+ 	nav ul{
+		display: flex;
+	    width: 201.7vh;
+		
+ 	}
+
+	nav li{
+		list-style-type: none;
+		text-decoration:none;
+		margin: 0.5vw 0vw;
+		font-size: 4vw;
+		display: flex;
+		width: 33.43vh
+	}
+
+	nav li a{
+		text-decoration:none;
+		color: var(--off-black-text);
+		background-color: var(--muted-green);
+		border-bottom: var(--off-black-text) 2px solid;
+		width: 30vh;
+        height: 6vw;
+		padding: 0px 2.15vh;
+		align-content: center;;
+    }
+	
+	nav ul li a:hover{
+		background-color: var(--muted-green);
+	}
+
+	nav ul li a:visited{
+		background-color: var(--sage);
+	}
+
+	footer a:visited{
+		color:var(--sage);
+	}
+
+	footer p{
+		font-size: 3vw;
+        display: flex;
+        justify-content: center;
+        padding: 6px;
+	}
+
+	main section{
+		display: grid;
+		justify-content: space-around;
+		justify-items: center;
+		grid-gap: 1vw;
+		align-items: center;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+		margin: 10px 0;
+        padding-left: 12px;
+	}
+
+	main section img{
+		width: 45vh;
+        height: 45vh;
+        align-self: stretch;
+	}
+		
+
+}
+
+/* media query for desktop (min 1024)*/
+@media only screen and (min-width: 1024px){
+
+
+	main{
+		margin: 4vh;
+        height: 147vw;
+	}
+
+	body{
+		    width: 123vw;
+	}
+
+	#slogan{
+		width: 57vh;
+	}
+
+	.themebttn{
+		bottom:10px;
+	}
+}
